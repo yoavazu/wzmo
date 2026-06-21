@@ -8,7 +8,7 @@ function App() {
     async function modifyPdf() {
       try {
         // Fetch the original PDF
-        const existingPdfBytes = await fetch('/weezmo.pdf').then((res) => res.arrayBuffer());
+        const existingPdfBytes = await fetch('weezmo.pdf').then((res) => res.arrayBuffer());
 
         // Load the PDF into pdf-lib
         const pdfDoc = await PDFDocument.load(existingPdfBytes);
